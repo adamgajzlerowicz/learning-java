@@ -24,6 +24,11 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	compile group: "de.flapdoodle.embed", name: "de.flapdoodle.embed.mongo"
 
+	compileOnly 'org.projectlombok:lombok:1.18.12'
+	annotationProcessor 'org.projectlombok:lombok:1.18.12'
+	testCompileOnly 'org.projectlombok:lombok:1.18.12'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
+
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
