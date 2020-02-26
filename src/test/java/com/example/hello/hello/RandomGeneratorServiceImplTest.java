@@ -1,23 +1,16 @@
 package com.example.hello.hello;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class RandomGeneratorServiceTest {
+public class RandomGeneratorServiceImplTest {
 
-    @Autowired
-    public RandomGeneratorService randomGeneratorService;
-
+    public RandomGeneratorServiceImpl randomGeneratorService;
 
     @Test
     public void generateRandomFactorsBetweenExpectedLimits() {
@@ -25,6 +18,7 @@ public class RandomGeneratorServiceTest {
             .map(i -> randomGeneratorService.generateRandomFactor())
             .boxed()
             .collect(Collectors.toList());
+        System.out.println(randomFactors);
 
         assertThat(randomFactors).containsOnlyElementsOf(IntStream.range(11, 100)
             .boxed()
