@@ -13,6 +13,11 @@ public class MultiplicationServiceImpl implements MultiplicationService {
     }
 
     @Override
+    public boolean checkAttempt(Multiplication multiplication) {
+        return false;
+    }
+
+    @Override
     public Multiplication createRandomMultiplication() {
         int factorA = this.randomGeneratorService.generateRandomFactor();
         int factorB = this.randomGeneratorService.generateRandomFactor();
