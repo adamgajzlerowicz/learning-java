@@ -4,10 +4,12 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
 
+@SpringBootTest
 public class MultiplicationServiceImplTest {
 
     private MultiplicationServiceImpl multiplicationServiceImpl;
